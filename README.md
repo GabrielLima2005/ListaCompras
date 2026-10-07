@@ -1,72 +1,113 @@
 # 🛒 Lista de Compras
 
-Aplicativo mobile desenvolvido em **React Native com Expo** como parte do CheckPoint acadêmico.
+Aplicativo de lista de compras desenvolvido em **React Native** utilizando **Expo** e **JavaScript**.
 
-O projeto tem como objetivo desenvolver uma lista de compras simples e funcional, utilizando principalmente os conceitos de **useState** e **FlatList**.
-
----
-
-## 📱 Sobre o projeto
-
-O **Lista de Compras** permite que o usuário adicione produtos a uma lista de forma rápida e organizada.
-
-A aplicação possui uma interface moderna e responsiva, com contador de itens e uma apresentação visual diferenciada para cada produto adicionado.
-
-### ✨ Funcionalidades
-
-- ➕ Adicionar novos produtos;
-- 📝 Digitar produtos utilizando `TextInput`;
-- 📋 Exibir produtos utilizando `FlatList`;
-- 🔢 Contador automático de itens;
-- 🛒 Estado visual para lista vazia;
-- 🎨 Interface personalizada;
-- 📱 Layout responsivo;
-- ⌨️ Adicionar itens pelo botão ou pelo teclado.
+O projeto foi desenvolvido como atividade acadêmica com o objetivo de praticar conceitos fundamentais do desenvolvimento de aplicações mobile, principalmente o gerenciamento de estados com `useState` e a renderização eficiente de listas utilizando `FlatList`.
 
 ---
 
-## 🖥️ Demonstração
+## 📌 Sobre o projeto
 
-### Lista vazia
+O **Lista de Compras** é uma aplicação mobile desenvolvida para permitir que o usuário cadastre produtos que deseja comprar e visualize todos os itens adicionados de maneira organizada.
 
-![Lista vazia](screenshots/lista-vazia.png)
+A aplicação possui uma interface simples, moderna e intuitiva, buscando facilitar a utilização e proporcionar uma boa experiência ao usuário.
 
-### Lista com 1 item
-
-![Lista com 1 item](screenshots/lista-1-item.png)
-
-### Lista com 5 itens
-
-![Lista com 5 itens](screenshots/lista-5-itens.png)
-
-> As imagens acima representam as três etapas solicitadas na atividade.
+O projeto também foi estruturado buscando separar a lógica da aplicação dos estilos visuais, mantendo o código organizado e de fácil manutenção.
 
 ---
 
-## 🛠️ Tecnologias utilizadas
+## 🎯 Objetivos
 
-| Tecnologia | Utilização |
-|---|---|
-| React Native | Desenvolvimento da interface mobile |
-| Expo | Ambiente de desenvolvimento |
-| JavaScript | Linguagem de programação |
-| useState | Gerenciamento do estado da lista |
-| FlatList | Renderização dos itens |
-| StyleSheet | Estilização da aplicação |
+O desenvolvimento da aplicação teve como principais objetivos:
+
+- Praticar o desenvolvimento de interfaces com React Native;
+- Utilizar estados para armazenar informações que podem sofrer alterações;
+- Implementar listas dinâmicas utilizando `FlatList`;
+- Trabalhar com entrada de dados através do `TextInput`;
+- Utilizar eventos de interação do usuário;
+- Criar uma interface visual personalizada;
+- Organizar o código em diferentes arquivos;
+- Aplicar boas práticas básicas de desenvolvimento.
 
 ---
 
-## 📂 Estrutura do projeto
+## ✨ Funcionalidades
 
-```text
-ListaCompras/
-│
-├── assets/
-│
-├── App.js
-├── styles.js
-├── app.json
-├── package.json
-├── package-lock.json
-├── .gitignore
-└── README.md
+### ➕ Adicionar produtos
+
+O usuário pode digitar o nome de um produto no campo de entrada e adicioná-lo à lista através do botão `+`.
+
+Também é possível adicionar o produto utilizando o teclado do dispositivo.
+
+### 📋 Listagem de produtos
+
+Todos os produtos cadastrados são apresentados dinamicamente utilizando o componente `FlatList`.
+
+Cada produto recebe uma numeração de acordo com sua posição na lista.
+
+### 🔢 Contador de itens
+
+A aplicação possui um contador que informa automaticamente a quantidade de produtos cadastrados.
+
+O texto também é adaptado de acordo com a quantidade:
+
+- `0 itens`
+- `1 item`
+- `2 itens`
+- `5 itens`
+
+### 🛒 Estado de lista vazia
+
+Quando nenhum produto foi adicionado, a aplicação apresenta uma mensagem informando que a lista está vazia.
+
+### 🎨 Interface personalizada
+
+A interface foi desenvolvida com uma identidade visual baseada em tons de verde, utilizando cartões, espaçamentos, bordas arredondadas e elementos visuais para melhorar a organização das informações.
+
+### 📱 Layout responsivo
+
+Os componentes foram organizados utilizando os recursos de layout do React Native, permitindo que a aplicação se adapte a diferentes tamanhos de tela.
+
+---
+
+## 🧰 Tecnologias utilizadas
+
+### React Native
+
+Framework utilizado para o desenvolvimento da interface da aplicação mobile.
+
+### Expo
+
+Plataforma utilizada para facilitar o desenvolvimento, execução e testes da aplicação React Native.
+
+### JavaScript
+
+Linguagem utilizada na implementação da aplicação.
+
+### React Hooks
+
+O projeto utiliza o Hook `useState` para gerenciamento das informações da aplicação.
+
+### FlatList
+
+Componente utilizado para renderizar dinamicamente os produtos cadastrados.
+
+### StyleSheet
+
+Utilizado para organização dos estilos da aplicação.
+
+---
+
+## 🧠 Conceitos aplicados
+
+Durante o desenvolvimento foram aplicados diversos conceitos fundamentais do React Native.
+
+### useState
+
+O `useState` é utilizado para armazenar e atualizar os dados que mudam durante a utilização da aplicação.
+
+São utilizados dois estados principais:
+
+```javascript
+const [item, setItem] = useState('');
+const [lista, setLista] = useState([]);
